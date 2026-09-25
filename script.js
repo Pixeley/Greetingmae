@@ -58,6 +58,8 @@ danceButton.addEventListener("click", function() {
     mainHall.style.display = "none";
     danceRoom.style.display = "block";
 
+    song.pause();
+
     danceVideo.currentTime = 0;
     danceAudio.currentTime = 0;
 
@@ -68,6 +70,8 @@ danceButton.addEventListener("click", function() {
 danceBackButton.addEventListener("click", function() {
     danceRoom.style.display = "none";
     mainHall.style.display = "block";
+
+    song.play();
 
     danceVideo.pause();
     danceAudio.pause();

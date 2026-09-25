@@ -1,5 +1,5 @@
 const shipButton = document.getElementById("set-sail");
-
+const song = document.getElementById("binks");
 const page1 = document.getElementById("page1");
 const mainHall = document.getElementById("main-hall");
 
@@ -31,6 +31,7 @@ const sendMessage = document.getElementById("send-message");
 shipButton.addEventListener("click", function() {
     page1.style.display = "none";
     mainHall.style.display = "block";
+    song.play();
 });
 
 

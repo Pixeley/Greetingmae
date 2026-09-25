@@ -1,1 +1,1162 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 24px;
+}
+.ship-button {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.ship-button img {
+    width: 120px;
+}
+.ship-button span {
+    font-family: "Pirata One", cursive;
+    font-size: 24px;
+    color: #3b2414;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100dvh;
+    overflow-x: auto;
+}
+
+#page1{
+    display: block;
+}
+
+.wanted-poster {
+    background: linear-gradient(135deg, #F5DEB3, #DEB887, #D2B48C);
+    color: #3B2F2F;
+    font-family: "IM Fell English SC", serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    padding: 15px;
+    gap: 8px;
+    width: 40dvw;
+    min-width: 620px;
+    height: 100dvh;
+}
+
+@media (max-width: 600px) {
+
+    .wanted-poster {
+        transform: scale(0.65);
+        transform-origin: top center;
+        margin-bottom: -35dvh;
+    }
+
+}
+
+.wanted__title {
+    height: 20dvh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.wanted__title>h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: translateY(10%) scaleY(1.5);
+    text-shadow: 0 5px 0 #3B2F2F;
+}
+
+.wanted__profile {
+    position: relative;
+    width: 100%;
+    height: 80dvh;
+    padding-inline: 30px;
+    display: grid;
+    grid-template-rows: 80% 20%;
+
+}
+
+.wanted__identity-info {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 70% 10% 20%;
+    grid-row: 1;
+}
+
+.wanted__img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.wanted__img>img {
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+.wanted__subtitle {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.wanted__subtitle>p {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #3B2F2F;
+    letter-spacing: 8px;
+}
+
+.wanted__name {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.wanted__name>h2 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+    word-spacing: 8px;
+    transform: translateY(10%) scaleY(2);
+}
+
+.wanted__bounty-info {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50% 30%;
+
+}
+
+.wanted__bounty-amount {
+    width: 100%;
+    height: 100%;
+}
+
+.wanted__bounty-amount>p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transform: translateY(10%) scaleY(1.5) scaleX(1.5);
+}
+
+.wanted__footer {
+    display: grid;
+    grid-template-columns: 75% 20%;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.wanted__desc {
+    height: 100%;
+    width: 100%;
+    text-align: justify;
+}
+
+.wanted__desc>p {
+    text-align: justify;
+    font-size: 0.5rem;
+    margin-block: 16px;
+}
+
+.marine {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marine>h3 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    transform: scaleY(3) scaleX(1.2);
+    letter-spacing: 2px;
+}
+
+#main-hall {
+    display: none;
+    width: 100dvw;
+    height: 100dvh;
+    background: #3b2414;
+    overflow: hidden;
+}
+
+.hall-wall {
+    position: relative;
+    width: 100%;
+    height: 35%;
+    background: #c89f72;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hall-floor {
+    position: relative;
+    width: 100%;
+    height: 65%;
+    background: #8b5a2b;
+}
+
+.hall-wall h1 {
+    font-family: "Pirata One", cursive;
+    font-size: 3rem;
+    text-align: center;
+    z-index: 5;
+}
+
+.hall-wall p {
+    font-family: "IM Fell English SC", serif;
+    font-size: 1.2rem;
+    text-align: center;
+    z-index: 5;
+}
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    z-index: 1;
+}
+
+.balloon-1 {
+    left: 15%;
+    top: 3%;
+}
+
+.balloon-2 {
+    right: 15%;
+    top: 3%;
+}
+
+.balloon-3 {
+    left: 50%;
+    top: 0%;
+    transform: translateX(-50%);
+}
+
+.tulip {
+    position: absolute;
+    width: 35px;
+    height: auto;
+    z-index: 2;
+}
+
+.tulip-1 {
+    left: 18%;
+    bottom: 2%;
+}
+
+.tulip-2 {
+    right: 18%;
+    bottom: 2%;
+}
+
+.balloon-bouquet {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    z-index: 2;
+    bottom: 0;
+}
+
+.bouquet-left {
+    left: 2%;
+}
+
+.bouquet-right {
+    right: 2%;
+}
+
+.party-table {
+    position: absolute;
+
+    width: 55%;
+    height: 35%;
+
+    left: 22.5%;
+    top: 25%;
+
+    background: #5c3218;
+    border: 6px solid #3b2414;
+    border-radius: 20px;
+
+    display: grid;
+    place-items: center;
+
+    box-shadow: 0 12px 0 #3b2414;
+}
+
+.party-table h2 {
+    font-size: 3rem;
+}
+
+.hall-sign {
+    position: absolute;
+
+    padding: 10px 16px;
+
+    background: #f5deb3;
+    border: 3px solid #3b2414;
+    border-radius: 8px;
+
+    font-family: "Pirata One", cursive;
+    font-size: 1.2rem;
+
+    box-shadow: 0 5px 0 #3b2414;
+}
+
+.galley-sign {
+    left: 5%;
+    bottom: 15%;
+}
+
+.dance-sign {
+    right: 5%;
+    bottom: 15%;
+}
+
+.exit-sign {
+    left: 50%;
+    bottom: 3%;
+
+    transform: translateX(-50%);
+}
+#galley {
+    display: none;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    background: #3b2414;
+    overflow: hidden;
+}
+.galley-wall {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background: #c89f72;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galley-wall h1 {
+    font-family: "Pirata One", cursive;
+    font-size: 2.8rem;
+    color: #3b2414;
+}
+
+.galley-wall p {
+    font-family: "IM Fell English SC", serif;
+    font-size: 1rem;
+    color: #3b2414;
+}
+
+.galley-floor {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background: #8b5a2b;
+    overflow: hidden;
+}
+
+.sanji-area {
+    position: absolute;
+    width: 100px;
+    height: 150px;
+
+    left: 50%;
+    top: 5%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    z-index: 5;
+}
+
+.sanji-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.food-table {
+    position: absolute;
+
+    width: 85%;
+    height: 48%;
+
+    left: 7.5%;
+    top: 28%;
+
+    background: #5c3218;
+
+    border: 6px solid #3b2414;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 0 #3b2414;
+
+    z-index: 10;
+}
+
+.tupperware {
+    position: absolute;
+
+    width: 75px;
+    height: 60px;
+
+    background: #d9e8e8;
+
+    border: 4px solid #3b2414;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 5px 0 #3b2414;
+
+    overflow: hidden;
+
+    z-index: 6;
+}
+
+.tupperware img {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tupperware-1 img {
+    width: 100px;
+    left: 70%;
+    top: 50%;
+}
+
+.tupperware-2 img {
+    width: 90px;
+    left: 40%;
+    top: 50%;
+}
+
+.tupperware-3 img {
+    width: 70px;
+    left: 50%;
+    top: 50%;
+}
+
+.tupperware-4 img {
+    width: 80px;
+    left: 50%;
+    top: 50%;
+}
+
+.tupperware-5 img {
+    width: 67px;
+    left: 50%;
+    top: 65%;
+}
+
+.tupperware-6 img {
+    width: 80px;
+    left: 55%;
+    top: 55%;
+}
+
+.tupperware-1 {
+    left: 8%;
+    top: 10%;
+}
+
+.tupperware-2 {
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+
+.tupperware-3 {
+    right: 8%;
+    top: 10%;
+}
+
+.tupperware-4 {
+    left: 8%;
+    top: 50%;
+}
+
+.tupperware-5 {
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.tupperware-6 {
+    right: 8%;
+    top: 50%;
+}
+
+.tableware {
+    position: absolute;
+
+    left: 50%;
+    bottom: 6%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    font-size: 3rem;
+
+    z-index: 12;
+}
+
+.galley-back {
+    position: absolute;
+
+    left: 50%;
+    bottom: 5%;
+
+    transform: translateX(-50%);
+
+    padding: 10px 20px;
+
+    background: #f5deb3;
+
+    border: 3px solid #3b2414;
+    border-radius: 8px;
+
+    font-family: "Pirata One", cursive;
+    font-size: 1rem;
+
+    color: #3b2414;
+
+    box-shadow: 0 5px 0 #3b2414;
+
+    cursor: pointer;
+}
+#dance {
+    display: none;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    background: #160d24;
+    overflow: hidden;
+}
+
+.dance-wall {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background:
+        radial-gradient(circle at 20% 50%, #ff4fa3 0%, transparent 25%),
+        radial-gradient(circle at 80% 50%, #4f8cff 0%, transparent 25%),
+        #24143b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 8px solid #0d0715;
+    z-index: 2;
+}
+
+.dance-wall h1 {
+    font-family: "Pirata One", cursive;
+    font-size: 3rem;
+    color: #f5deb3;
+    text-shadow: 4px 4px 0 #3b2414;
+}
+
+.dance-wall p {
+    font-family: "IM Fell English SC", serif;
+    font-size: 1.1rem;
+    color: #f5deb3;
+}
+
+.disco-ball {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    animation: disco-spin 3s linear infinite;
+}
+
+@keyframes disco-spin {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.dance-floor {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    background-color: #24152e;
+    background-image:
+        linear-gradient(#493052 2px, transparent 2px),
+        linear-gradient(90deg, #493052 2px, transparent 2px);
+    background-size: 60px 60px;
+    overflow: hidden;
+}
+
+#dance-video {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    width: min(500px, 55vw);
+    height: 90%;
+    object-fit: contain;
+    z-index: 5;
+    filter: drop-shadow(0 15px 10px rgba(0, 0, 0, 0.5));
+}
+
+.dance-lights {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    filter: blur(35px);
+    opacity: 0.45;
+    z-index: 1;
+}
+
+.light-1 {
+    background: #ff3b9d;
+    left: 5%;
+    top: 10%;
+}
+
+.light-2 {
+    background: #3b82ff;
+    right: 5%;
+    top: 15%;
+}
+
+.light-3 {
+    background: #a855f7;
+    left: 20%;
+    bottom: 5%;
+}
+
+.light-4 {
+    background: #22d3ee;
+    right: 20%;
+    bottom: 5%;
+}
+
+.dance-confetti {
+    position: absolute;
+    left: 8%;
+    top: 15%;
+    font-size: 3rem;
+    z-index: 6;
+    animation: float-party 3s ease-in-out infinite;
+}
+
+.confetti-2 {
+    left: auto;
+    right: 8%;
+    top: 20%;
+    animation-delay: 1s;
+}
+
+.confetti-3 {
+    left: 15%;
+    top: auto;
+    bottom: 15%;
+    animation-delay: 2s;
+}
+
+@keyframes float-party {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+.dance-back {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: #f5deb3;
+    border: 3px solid #3b2414;
+    border-radius: 8px;
+    font-family: "Pirata One", cursive;
+    font-size: 1rem;
+    color: #3b2414;
+    box-shadow: 0 5px 0 #3b2414;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.dance-back:active {
+    transform: translateX(-50%) translateY(4px);
+    box-shadow: 0 1px 0 #3b2414;
+}
+
+#exit {
+    display: none;
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.04), transparent 30%),
+        #21150e;
+}
+
+.exit-room {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 4vh 4vw;
+}
+
+.parchment {
+    position: relative;
+
+    width: min(900px, 90vw);
+    height: min(700px, 88vh);
+
+    padding: 55px 65px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(75, 38, 10, 0.22),
+            transparent 18%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(75, 38, 10, 0.25),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255, 240, 190, 0.3),
+            transparent 60%
+        ),
+        linear-gradient(
+            135deg,
+            #d8b77a,
+            #ead19a 45%,
+            #c49a5e
+        );
+
+    color: #3b2414;
+
+    box-shadow:
+        0 25px 45px rgba(0, 0, 0, 0.55),
+        inset 0 0 35px rgba(70, 35, 10, 0.35);
+
+    clip-path: polygon(
+        1% 2%,
+        7% 1%,
+        14% 2%,
+        21% 1%,
+        29% 3%,
+        38% 1%,
+        47% 2%,
+        56% 1%,
+        64% 3%,
+        73% 1%,
+        82% 2%,
+        91% 1%,
+        99% 4%,
+
+        98% 12%,
+        100% 20%,
+        97% 29%,
+        100% 38%,
+        97% 47%,
+        100% 57%,
+        98% 67%,
+        100% 77%,
+        97% 88%,
+        99% 97%,
+
+        91% 99%,
+        83% 97%,
+        75% 100%,
+        66% 98%,
+        57% 100%,
+        48% 98%,
+        39% 100%,
+        30% 98%,
+        21% 100%,
+        12% 98%,
+        2% 100%,
+
+        1% 91%,
+        3% 82%,
+        1% 73%,
+        3% 63%,
+        0% 53%,
+        3% 43%,
+        1% 34%,
+        3% 24%,
+        1% 14%
+    );
+}
+.parchment::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse at 5% 50%,
+            rgba(55, 25, 5, 0.45),
+            transparent 18%
+        ),
+        radial-gradient(
+            ellipse at 95% 30%,
+            rgba(55, 25, 5, 0.4),
+            transparent 17%
+        ),
+        radial-gradient(
+            ellipse at 40% 100%,
+            rgba(55, 25, 5, 0.3),
+            transparent 20%
+        );
+
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
+.parchment-header {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+}
+
+.parchment-header h1 {
+    font-family: "Pirata One", cursive;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+}
+
+.parchment-header p {
+    margin-top: 8px;
+    font-family: "IM Fell English SC", serif;
+    font-size: 1.2rem;
+}
+
+.writing-area {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 55%;
+
+    margin-top: 25px;
+
+    border-top: 2px solid rgba(59, 36, 20, 0.35);
+    border-bottom: 2px solid rgba(59, 36, 20, 0.35);
+}
+
+#captain-message {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px 10px;
+
+    outline: none;
+
+    color: #3b2414;
+
+    font-family: "IM Fell English SC", serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+    overflow-y: auto;
+
+    caret-color: transparent;
+}
+
+#captain-message:empty::before {
+    content: attr(data-placeholder);
+    color: rgba(59, 36, 20, 0.55);
+    font-style: italic;
+}
+
+.quill {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    font-size: 2rem;
+
+    pointer-events: none;
+
+    transform-origin: 15% 85%;
+
+    z-index: 10;
+}
+
+.quill.writing {
+    animation: quill-writing 0.18s ease-in-out infinite alternate;
+}
+
+@keyframes quill-writing {
+    from {
+        transform: rotate(-28deg) translate(0, 0);
+    }
+
+    to {
+        transform: rotate(-18deg) translate(-2px, 3px);
+    }
+}
+.parchment-footer {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#character-count {
+    font-family: "IM Fell English SC", serif;
+    font-size: 0.8rem;
+}
+
+#send-message {
+    padding: 10px 18px;
+
+    background: #7d1f1f;
+    color: #f5deb3;
+
+    border: 3px solid #3b2414;
+    border-radius: 4px;
+
+    font-family: "Pirata One", cursive;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 0 #3b2414;
+
+    transition: 0.1s;
+}
+
+#send-message:active {
+    transform: translateY(4px);
+    box-shadow: 0 1px 0 #3b2414;
+}
+
+.exit-back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    padding: 6px 12px;
+
+    background: #f5deb3;
+    color: #3b2414;
+
+    border: 2px solid #3b2414;
+    border-radius: 6px;
+
+    font-family: "Pirata One", cursive;
+    font-size: 0.8rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 0 #3b2414;
+
+    transition: 0.1s;
+
+    z-index: 20;
+}
+
+.exit-back:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 #3b2414;
+}
+
+.message-success {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(234, 209, 154, 0.97),
+            rgba(196, 154, 94, 0.98)
+        );
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 30;
+}
+
+.message-success h2 {
+    margin-top: 20px;
+
+    font-family: "Pirata One", cursive;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+
+    color: #3b2414;
+
+    transform: translateY(15px);
+    opacity: 0;
+}
+
+.message-success p {
+    margin-top: 8px;
+
+    font-family: "IM Fell English SC", serif;
+    font-size: 1rem;
+
+    color: #3b2414;
+
+    transform: translateY(15px);
+    opacity: 0;
+}
+
+
+/* Wax seal */
+
+.wax-seal {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #7d1f1f;
+    color: #f5deb3;
+
+    border: 5px solid #541414;
+
+    font-size: 2rem;
+
+    box-shadow:
+        0 8px 0 #3b2414,
+        inset 0 0 15px rgba(0, 0, 0, 0.3);
+
+    transform: scale(0) rotate(-20deg);
+}
+
+
+/* Activated after successful submission */
+
+.parchment.sent .message-success {
+    opacity: 1;
+    visibility: visible;
+}
+
+.parchment.sent .wax-seal {
+    animation: seal-drop 0.6s cubic-bezier(.17,.67,.35,1.4) forwards;
+}
+
+.parchment.sent .message-success h2 {
+    animation: message-rise 0.5s ease-out 0.35s forwards;
+}
+
+.parchment.sent .message-success p {
+    animation: message-rise 0.5s ease-out 0.5s forwards;
+}
+
+
+@keyframes seal-drop {
+
+    0% {
+        transform: scale(0) rotate(-20deg);
+    }
+
+    70% {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+}
+
+
+@keyframes message-rise {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

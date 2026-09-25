@@ -4,8 +4,215 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div></div>
+    <audio id="binks" src="audio/binks-no-sake.mp3"></audio>
+    <section id="page1">
+         <article class="wanted-poster">
+        <div class="wanted__title">
+            <h1>Wanted</h1>
+        </div>
+        <div class="wanted__profile">
+            <div class="wanted__identity-info">
+                <div class="wanted__img">
+                    <img src="images/trisha.jpg" alt="">
+                </div>
+                <div class="wanted__subtitle">
+                    <p>Dead or Alive</p>
+                </div>
+                <div class="wanted__name">
+                    <h2>Trisha Mae Pesidas</h2>
+                </div>
+            </div>
+            <div class="wanted__bounty-info">
+                <div class="wanted__bounty-amount">
+                    <p>฿320,000,000</p>
+                </div>
+                <div class="wanted__footer">
+                    <div class="wanted__desc">
+                        <p>Dangerous captain of the Bonney Pirates. Devil Fruit user with the ability to
+                            manipulate age. Extreme gluttony.
+                            Suspected ties to key figures within the World Government.</p>
+                    </div>
+                    <div class="marine">
+                        <h3>Marine</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div id="lower">
+        <button  id="set-sail"
+        class="ship-button">
+            <img src="images/ThousandSunny.png" alt="Set Sail">
+            <span>SET SAIL</span>
+        </button>
+    </div>
+    </section>
+    <section id="main-hall">
+         <div class="hall-wall">
+        <h1>Happy Birthday!</h1>
+        <p>Welcome to the party!</p>
+        <!-- Decorations -->
+        <img class="balloon balloon-1" src="images/balloon.png" alt="">
+        <img class="balloon balloon-2" src="images/balloon.png" alt="">
+        <img class="balloon balloon-3" src="images/balloon.png" alt="">
+
+        <img class="tulip tulip-1" src="images/tulip.png" alt="">
+        <img class="tulip tulip-2" src="images/tulip2.png" alt="">
+
+        <img class="balloon-bouquet bouquet-left" src="images/balloon bouquet.png" alt="">
+        <img class="balloon-bouquet bouquet-right" src="images/balloon bouquet.png" alt="">
+    </div>
+
+    <div class="hall-floor">
+
+        <div class="party-table">
+            <h2>🎂</h2>
+        </div>
+
+        <button class="hall-sign galley-sign">
+            GALLEY
+        </button>
+
+        <button class="hall-sign dance-sign">
+            DANCE
+        </button>
+
+        <div class="hall-sign exit-sign">
+            ↓ EXIT
+        </div>
+
+    </div>
+    </section>
+    <section id="galley">
+        <div class="galley-wall">
+        <h1>Galley</h1>
+        <p>Sanji's Kitchen</p>
+    </div>
+
+    <div class="galley-floor">
+
+        <div class="sanji-area">
+            <img src="images/sanji.png" alt="Sanji">
+        </div>
+
+        <div class="food-table">
+
+    <div class="tupperware tupperware-1">
+        <img src="images/spag.jpg" alt="Spaghetti">
+    </div>
+
+    <div class="tupperware tupperware-2">
+        <img src="images/shanghai.avif" alt="Shanghai">
+    </div>
+
+    <div class="tupperware tupperware-3">
+        <img src="images/menudo.jpg" alt="Menudo">
+    </div>
+
+    <div class="tupperware tupperware-4">
+        <img src="images/rice.jpeg" alt="Rice">
+    </div>
+
+    <div class="tupperware tupperware-5">
+        <img src="images/hotdog.jpeg" alt="Hotdog">
+    </div>
+
+    <div class="tupperware tupperware-6">
+        <img src="images/meat.jpeg" alt="Meat">
+    </div>
+
+    <div class="tableware">
+        <span>🍽️</span>
+        <span>🥢</span>
+    </div>
+
+</div>
+
+<button class="galley-back">
+    ← BACK
+</button>
+
+    </div>
+    </section>
+    <section id="dance">
+        <div class="dance-wall">
+        <h1>Dance Floor</h1>
+        <p>Let's get this party started!</p>
+        <div class="disco-ball">🪩</div>
+    </div>
+
+    <div class="dance-floor">
+
+        <div class="dance-lights light-1"></div>
+        <div class="dance-lights light-2"></div>
+        <div class="dance-lights light-3"></div>
+        <div class="dance-lights light-4"></div>
+
+        <video id="dance-video" loop playsinline>
+            <source src="video/dorobo.webm" type="video/webm">
+        </video>
+
+        <audio id="dance-audio" loop>
+            <source src="audio/dance-audio.mp3" type="audio/mpeg">
+        </audio>
+
+        <div class="dance-confetti">🎉</div>
+        <div class="dance-confetti confetti-2">🎊</div>
+        <div class="dance-confetti confetti-3">✨</div>
+
+        <button class="dance-back">← BACK</button>
+
+    </div>
+    </section>
+    <section id="exit">
+        <div class="exit-room">
+
+        <form class="parchment" id="captain-form">
+
+    <div class="parchment-header">
+        <h1>Before You Go...</h1>
+        <p>Leave a thought for the Captain.</p>
+    </div>
+
+    <div class="writing-area">
+
+        <div
+            id="captain-message"
+            contenteditable="true"
+            data-placeholder="Write your message here..."
+        ></div>
+        <textarea
+            id="message-data"
+            name="message"
+            hidden
+        ></textarea>
+
+        <div class="quill">🪶</div>
+
+    </div>
+
+    <div class="parchment-footer">
+        <span id="character-count">0 / 1000</span>
+
+        <button id="send-message" type="submit">
+            ⚓ SEND TO THE CAPTAIN
+        </button>
+    </div>
+
+    <div class="message-success" id="message-success">
+        <div class="wax-seal">⚓</div>
+        <h2>Message Sent!</h2>
+        <p>Your message has set sail.</p>
+    </div>
+
+</form>
+            <button class="exit-back">← BACK TO THE PARTY</button>
+    </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
